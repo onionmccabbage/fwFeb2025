@@ -1,0 +1,16 @@
+20-minute challenge 
+
+Load up 'tools.json' (copy from chat)
+
+Write code to grab and show
+- the entire 'tools' data structure
+- just the 'name' then just the top-level 'description'
+- the entire 'input_schema'
+- just the 'parties' structure
+- just the 'sectors' struture
+- the teams description
+
+Optional
+Pull together only these parts from 'tools' structure into a new list:
+- parties, sectors, background, teams
+

@@ -19,11 +19,18 @@ def handleData():
     # we can convert this into a Pyuthon structure
     results_obj = json.loads(result)
     # challenge: print the 'coord' value of our dict
-    print(f'{results_obj["coord"]}') # FIXED!!
+    print(results_obj['coord']) # we're not obliged to inject it into a formatted string...
+    # challnge: print the 'visibility'
+    print(results_obj['visibility'])
+    # but often we do need to
+    # print(f"{results_obj["coords"]}") # OOPS - do not use same quotes inside same quotes
+    # print(f"{results_obj['coord']}") # FIXED!!
+    # print(f'{results_obj["coord"]}') # FIXED!!
     # print(type(results_obj), results_obj)
 
 # make them into a new pretty structure
 
 if __name__ == '__main__':
-    print( grabJSON() )
+    # print( grabJSON() )
     handleData()
+    # print('It's you! Feathers McGraw')
