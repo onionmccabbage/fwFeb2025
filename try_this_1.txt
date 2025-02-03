@@ -6,11 +6,7 @@ Write code to grab and show
 - the entire 'tools' data structure
 - just the 'name' then just the top-level 'description'
 - the entire 'input_schema'
-- just the 'parties' structure
-- just the 'sectors' struture
-- the teams description
+- just the 'data'
+- the 'required' bit
 
-Optional
-Pull together only these parts from 'tools' structure into a new list:
-- parties, sectors, background, teams
 
