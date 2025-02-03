@@ -5,6 +5,7 @@ b=7.3 # this is a float
 # + - / *
 
 def someFn():
+    '''this is a docstring (documenting the function)'''
     # anything within this code block belongs to this code block
     # stuff here is NOT global
     a=99
