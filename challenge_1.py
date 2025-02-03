@@ -20,6 +20,7 @@ def handleData():
     results_obj = json.loads(result)
     print(results_obj) # the entire loaded data structure
     # we have a LIST containing a DICT so we will need [0]
+    # we parse the structure, we walk-the-tree
     print(results_obj[0]['name'])
     print(results_obj[0]['description'])
     print(results_obj[0]['input_schema'])

@@ -12,3 +12,5 @@ if __name__ == '__main__':
     # i.e. we exercise this module here, condifent the exercise code will not be used on import
     print(f'This module is called {__name__}')
     addThem(3,2)
+    say = 'it is nearly \nthe end' # \n means a new line character
+    print(say)
