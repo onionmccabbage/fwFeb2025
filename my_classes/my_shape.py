@@ -50,6 +50,7 @@ class Shape: # in Python everything ultimately iherits from object
                     self.__dimensions.append(1) # a sensible default
         else:
             raise TypeError('dimensions must be a tuple of 2 or more values')
+    # we may override ANY built in method within Python
     def __str__(self):
         '''The __str__ method is always used when we 'print' an instance'''
         return f'This is a {self.name} with {self.numSides} sides, dimensions {self.dimensions}'
