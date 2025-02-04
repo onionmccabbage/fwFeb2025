@@ -1,0 +1,17 @@
+Mini Exercise for 25 mins (until 2:15)
+
+Add another property to the Shape class, for 'dimensions'
+This property nees to be a tuple cotaining at least two values
+Each value within this tuple must be a postive int or float
+You will need:
+- a __slots__ member
+- an argument in the __init__method
+- getter/setter methods
+
+Write a function within the Shape class called '__str__'
+(remember it must take 'self' as an argument)
+Within this function, return a formatted string where you inject the shape name and sides
+e.g. 'This is a square with 4 sides, dimensions 3x5'
+
+Exercise the code by adding a 'dimensions' tuple to the instances
+e.g.  s1 = Shape('square', 4, (4,3)) # the (4,3) is the 'dimensions' tuple
