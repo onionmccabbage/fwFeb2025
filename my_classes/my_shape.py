@@ -10,7 +10,7 @@ class Shape:
     __slots__ = ('__name', '__numSides') # NB a one-member tuple MUST have a trailing comma
     # every funtion that belongs to this class MUST take self as an argument
     def __init__(self, name='default', numSides=4): # the initializer is called every time we make an instance of this class
-        self.name = name
+        self.name = name # this invokes the property setter (with validation)
         self.numSides = numSides
     @property # this is known as decorator syntax
     def name(self):
