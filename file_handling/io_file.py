@@ -1,11 +1,28 @@
-# read a whole file e,g, 40,000 rows by 30 columns approx
-# each row may reerence a table with ~100,000 rows
+# working with byte files
 
-# run pipeline, adds to new DB, or to country ( USA, Canada )
-# probably aim to keep keyword csv together
+def writebytes(b):
+    '''write some bytes'''
+    # we have a file access object - this is NOT the file itself
+    # the operating system does the actual file handling om our behalf
+    # NB usually wrap this is try-except
+    # fout = open('mybytes' , 'wb') # 'wb' will (over)write bytes
+    # fout.write(b)
+    # fout.close() # tidy up when done
+    # or more briefly
+    with(open('mybytes', 'ab')) as fout:
+        # fout.writelines() # iterate a collection and wtie its lines
+        fout.write(b) # when 'with' is done, it closes fout
+        fout.write(f'\n\n'.encode())
 
-# 1. 40,000 is too many for the website
-#    so only go to row x
-# 2. read a row from a table, then look up in another table (lots)
-#    given a keyword, which page do we expect to rank for this keyword
+def readBytes():
+    '''read and show the byte file'''
+    with(open('mybytes', 'rb')) as fin: # 'rb' will read bytes
+        s = fin.readlines() # read all the content into a list object with each line as a member
+        r = fin.read() # read in the entire content
+    return r
 
+if __name__ == '__main__':
+    b = bytes('this is plain text'.encode('utf-8'))
+    writebytes(b)
+    r = readBytes()
+    print(f'Retrieved {r.decode()}')
