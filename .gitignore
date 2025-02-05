@@ -4,6 +4,8 @@
 .env
 # ignore agents.py 
 agents.py
+# also ignore...
+cfs_global_site_experiments.ipynb
 
 # ignore ALL files in ANY directory named data
 data/ 
