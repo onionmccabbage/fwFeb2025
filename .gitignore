@@ -1,0 +1,9 @@
+# ignore ALL .csv files
+*.csv
+# ignore .env files
+.env
+# ignore agents.py 
+agents.py
+
+# ignore ALL files in ANY directory named data
+data/ 
