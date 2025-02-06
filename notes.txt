@@ -1,0 +1,133 @@
+Python Programing for Genie AI
+==============================
+
+Feb 3-6 2025
+
+Toby Dussek
+
+ 9:30 start
+11:00 coffee break 15 mins
+12:30 lunch until 1:30
+ 3:00 tea break for 15 mins
+ 4:30 end
+
+Course repo: https://github.com/onionmccabbage/fwFeb2025
+
+Monday
+> get the tools together (easy) and cover Python basics
+> have a play with data tools (whet your appetite)
+> Running Python in VSCode
+> Running Python in Jupyter Notebooks
+> data structures, enumeration/iteration, slicing, ordinals
+> working with strings, single/double/triple quotes
+> string control charactes \n etc
+> how does VSCode, ipynb, jupyter, venv hang together
+> how to handle data sources where we dont know the structure or if what we want is in there
+q - optimize Python (in modules and in Jupyter)
+
+Python is actually cpython (written in 'c')
+There is also ipython, or interactive python, as used in Jupyter Notebooks (also written in 'c') 
+There is ironpython (.net) jython (java) not popular
+
+To get Jupyter installed:
+- try 
+    > pip install notebook
+ or
+    > pip3 install notebook
+ or
+    > python ensurepip
+    > pip install notebook
+
+To launch Jupyter
+- try
+    > jupyter notebook
+ or
+    > python -m jupyter
+
+NB you may also need the Jupyter extension for VSCode
+
+Tuesday
+> take a glance at my git history from yesterday
+> string join() and encoding
+> tuple, list, dictionary
+> functions
+> *args and **kwargs
+> Learn about Python code structures (architecture) (good for maintaning code)
+- either side of = and ==
+> classes, inheritance, overriding methods
+> persistent data-storage as csv and json
+> Get up to speed with Numpy/Pandas for Data Analysis
+> after lunch exercise
+> path and import...
+
+Wednesday
+URLs
+> REST (URL represents the state)
+> https://example.com/arg/other/also/data=nnnnnn?a=1&b=5&c=5#anchor*nn
+> URL encoding: all network interactions must be encoded
+'this is normal text'.encode() # coverts to URL encoded format
+somethingencoded.decode() # converts back to plain text
+all non-standard characters need to be encoded
+This is often called byte-encoding
+
+> API access keys
+(also pip install anthropic)
+# methods of working
+  csv files will be bigger than what can be loaded
+  currently manually batching: cms limits on max file size
+
+# read a whole file e,g, 40,000 rows by 30 columns approx
+# each row may reference a table with ~100,000 rows
+
+# run pipeline, adds to new DB, or to country ( USA, Canada )
+# probably aim to keep keyword csv together
+
+# 1. 40,000 is too many for the website
+#    so only go to row x
+# 2. read a row from a table, then look up in another table (lots)
+#    given a keyword, which page do we expect to rank for this keyword
+
+# are duplicates a problem?
+# currently if it exists, don't re-create it, if not, create it
+# also check if its been created before, if so, dont re-create
+
+
+  maybe a way to batch the csv
+> using .env
+> types and dtypes
+> Numpy and Pandas underlying data structures
+> file access
+> the 'with' operator
+> What objects the AI is expecting...
+> Loading data from CSV, Excel, web etc.
+> Data sanity
+> Data cleansing and preparation (dealing with nulls, outliers etc)
+
+Thursday
+> run keyword pipeline - complete the country lookup...
+> also 113 make the jurisdiction programmable
+> also industry - make this an environment variable
+> this has also clustering_country hard-coded
+implications for where we inject arguments
+> file structuring
+> venv see https://frankcorso.dev/setting-up-python-environment-venv-requirements.html
+> inplace=True
+> nunique
+> loc and iloc
+
+
+Use pip within jupyter notebooks:
+- instead of pip install, write %pip install
+- once run inside Jupyter, that line can be deleted
+
+
+Further Reading
+The Anthropic 'cookbook'
+https://github.com/anthropics/anthropic-cookbook
+
+End of course feedback
+https://forms.microsoft.com/e/m5ydbD8MPD
+
+
+
+
